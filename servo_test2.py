@@ -6,7 +6,7 @@ GPIO.setup(18, GPIO.OUT)
 GPIO.output(18, True)
 time.sleep(0.05)
 ser = serial.Serial('/dev/ttyAMA0', 115200)
-angle=12000
+angle=19000
 #angle=32000
 ID=19
 newID=ID
