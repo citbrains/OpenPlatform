@@ -21,5 +21,7 @@
     <xacro:include filename="$(find gk_description)/urdf/arms/left_arm.urdf.xacro"/>
     <xacro:include filename="$(find gk_description)/urdf/arms/right_arm.urdf.xacro"/>
     <xacro:include filename="$(find gk_description)/urdf/head/head.urdf.xacro"/>
+    <xacro:include filename="$(find gk_description)/urdf/legs/left_leg.urdf.xacro"/>
+    <xacro:include filename="$(find gk_description)/urdf/legs/right_leg.urdf.xacro"/>
 
 </robot>
