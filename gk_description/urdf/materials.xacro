@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    
+    <xacro:macro name="default_color" params="name color">
+        <material name="${name}">
+            <color rgba="${color}" />
+        </material>
+    </xacro:macro>
+
+    <xacro:default_color name="black" color="0.0 0.0 0.0 1.0" />
+    <xacro:default_color name="blue" color="0.0 0.0 0.8 1.0" />
+    <xacro:default_color name="green" color="0.0 0.8 0.0 1.0" />
+    <xacro:default_color name="grey" color="0.5 0.5 0.5 1.0" />
+    <xacro:default_color name="orange" color="${255/255} ${108/255} ${10/255} 1.0" />
+    <xacro:default_color name="brown" color="${255/255} ${207/255} ${195/255} 1.0" />
+    <xacro:default_color name="red" color="0.8 0.0 0.0 1.0" />
+    <xacro:default_color name="white" color="1.0 1.0 1.0 1.0" />
+
+</robot>
