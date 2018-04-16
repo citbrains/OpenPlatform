@@ -2,7 +2,7 @@
 <package format="2">
   <name>gk_bringup</name>
   <version>0.0.0</version>
-  <description>Ganken-Kun bring up package</description>
+  <description>GankenKun bring up package</description>
 
   <maintainer email="supratmanjoshua@gmail.com">Joshua Supratman</maintainer>
 

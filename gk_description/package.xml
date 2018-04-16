@@ -2,7 +2,7 @@
 <package format="2">
   <name>gk_description</name>
   <version>0.0.0</version>
-  <description>Ganken-Kun description package</description>
+  <description>GankenKun description package</description>
 
   <maintainer email="supratmanjoshua@gmail.com">Joshua Supratman</maintainer>
 
