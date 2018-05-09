@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<launch>
+	<!-- arguements that can be passed in this launch file-->
+	<arg name="paused" default="true" />
+	<arg name="use_sim_time" default="false" />
+	<arg name="gui" default="true" />
+	<arg name="headless" default="false" />
+	<arg name="debug" default="true" />
+
+	<!-- assume empty world -->
+	<include file="$(find gazebo_ros)/launch/empty_world.launch" >
+		<arg name="debug" value="$(arg debug)" />
+		<arg name="gui" value="$(arg gui)" />
+		<arg name="paused" value="$(arg paused)" />
+		<arg name="use_sim_time" value="$(arg use_sim_time)" />
+		<arg name="headless" value="$(arg headless)" />
+	</include>
+
+	<!--load the URDF into ROS parameter server -->
+	<arg name="model" />
+	<param name="robot_description" command="$(find xacro)/xacro.py $(arg model)" />
+
+	<!-- run python script to the send a service call to gazebo_ros to spawn a URDF robot-->
+	<node name="urdf_spwaner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-urdf -model robot1 -param robot_description -z 0.05" />
+
+</launch>
+

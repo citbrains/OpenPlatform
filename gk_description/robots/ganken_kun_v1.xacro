@@ -21,7 +21,19 @@
     <xacro:include filename="$(find gk_description)/urdf/arms/left_arm.urdf.xacro"/>
     <xacro:include filename="$(find gk_description)/urdf/arms/right_arm.urdf.xacro"/>
     <xacro:include filename="$(find gk_description)/urdf/head/head.urdf.xacro"/>
-    <xacro:include filename="$(find gk_description)/urdf/legs/left_leg.urdf.xacro"/>
     <xacro:include filename="$(find gk_description)/urdf/legs/right_leg.urdf.xacro"/>
+    <xacro:include filename="$(find gk_description)/urdf/legs/left_leg.urdf.xacro"/>
+
+    <!-- Import transmission -->
+    <xacro:include filename="$(find gk_description)/urdf/arms/arm.transmission.xacro" />
+    <xacro:include filename="$(find gk_description)/urdf/head/head.transmission.xacro" />
+    <xacro:include filename="$(find gk_description)/urdf/legs/leg.transmission.xacro" />
+
+    <!-- Import gazebo plugin -->
+    <xacro:include filename="$(find gk_description)/urdf/gazebo.xacro"/>
+    <xacro:include filename="$(find gk_description)/urdf/body/body.gazebo.xacro"/>
+    <xacro:include filename="$(find gk_description)/urdf/arms/arm.gazebo.xacro" />
+    <xacro:include filename="$(find gk_description)/urdf/head/head.gazebo.xacro" />
+    <xacro:include filename="$(find gk_description)/urdf/legs/leg.gazebo.xacro" />
 
 </robot>

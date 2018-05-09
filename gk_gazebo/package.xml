@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>gk_gazebo</name>
+  <version>0.0.0</version>
+  <description>The gk_gazebo package</description>
+
+  <maintainer email="supratmanjoshua@gmail.com">Joshua Supratman</maintainer>
+
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>gazebo_ros</build_depend>
+  <build_depend>gazebo_ros_control</build_depend>
+  <build_depend>hardware_interface</build_depend>
+  <build_depend>urdf</build_depend>
+  <build_depend>xacro</build_depend>
+  <build_export_depend>gazebo_ros</build_export_depend>
+  <build_export_depend>gazebo_ros_control</build_export_depend>
+  <build_export_depend>hardware_interface</build_export_depend>
+  <build_export_depend>urdf</build_export_depend>
+  <build_export_depend>xacro</build_export_depend>
+  <exec_depend>gazebo_ros</exec_depend>
+  <exec_depend>gazebo_ros_control</exec_depend>
+  <exec_depend>hardware_interface</exec_depend>
+  <exec_depend>urdf</exec_depend>
+  <exec_depend>xacro</exec_depend>
+
+  <export>
+  </export>
+</package>

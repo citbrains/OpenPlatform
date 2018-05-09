@@ -6,7 +6,7 @@
         <parent link="body_link" />
         <child link="head_yaw_link" />
         <origin xyz="0 0 0.152" rpy="0 0 0" />
-        <limit effort="1000" lower="${-PI}" upper="${PI}" velocity="1.0" />
+        <limit effort="1000" lower="${-3*PI/4}" upper="${3*PI/4}" velocity="1.0" />
         <axis xyz="0 0 1" />
     </joint>
     <joint name="head_pitch_joint" type="revolute" >
