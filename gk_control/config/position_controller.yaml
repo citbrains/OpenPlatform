@@ -1,0 +1,110 @@
+#head controller
+head_yaw_controller:
+  type: position_controllers/JointPositionController
+  joint: head_yaw_joint
+  pid: {p: 100.0, i: 0.01, d: 100.0}
+
+head_pitch_controller:
+  type: position_controllers/JointPositionController
+  joint: head_pitch_joint
+  pid: {p: 100.0, i: 0.01, d: 100.0}
+
+#arm controller
+left_shoulder_pitch_controller:
+  type: position_controllers/JointPositionController
+  joint: left_shoulder_pitch_joint
+  pid: {p: 100.0, i: 0.01, d: 100.0}
+
+left_shoulder_roll_controller:
+  type: position_controllers/JointPositionController
+  joint: left_shoulder_roll_joint
+  pid: {p: 100.0, i: 0.01, d: 100.0}
+  
+left_arm_pitch_controller:
+  type: position_controllers/JointPositionController
+  joint: left_arm_pitch_joint
+  pid: {p: 100.0, i: 0.01, d: 100.0}
+  
+right_shoulder_pitch_controller:
+  type: position_controllers/JointPositionController
+  joint: right_shoulder_pitch_joint
+  pid: {p: 100.0, i: 0.01, d: 100.0}
+
+right_shoulder_roll_controller:
+  type: position_controllers/JointPositionController
+  joint: right_shoulder_roll_joint
+  pid: {p: 100.0, i: 0.01, d: 100.0}
+  
+right_arm_pitch_controller:
+  type: position_controllers/JointPositionController
+  joint: right_arm_pitch_joint
+  pid: {p: 100.0, i: 0.01, d: 100.0}
+
+
+right_ankle_roll_controller:
+  type: position_controllers/JointPositionController
+  joint: right_ankle_roll_joint
+  pid: {p: 100.0, i: 0.01, d: 100.0}
+
+#right leg controller
+right_waist_yaw_controller:
+  type: position_controllers/JointPositionController
+  joint: right_waist_yaw_joint
+  pid: {p: 100.0, i: 0.01, d: 100.0}
+
+right_waist_roll_controller:
+  type: position_controllers/JointPositionController
+  joint: right_waist_roll_joint
+  pid: {p: 100.0, i: 0.01, d: 100.0}
+
+right_waist_pitch_controller:
+  type: position_controllers/JointPositionController
+  joint: right_waist_pitch_joint
+  pid: {p: 100.0, i: 0.01, d: 100.0}
+
+right_knee_pitch_controller:
+  type: position_controllers/JointPositionController
+  joint: right_knee_pitch_joint
+  pid: {p: 100.0, i: 0.01, d: 100.0}
+
+right_ankle_pitch_controller:
+  type: position_controllers/JointPositionController
+  joint: right_ankle_pitch_joint
+  pid: {p: 100.0, i: 0.01, d: 100.0}
+
+right_ankle_roll_controller:
+  type: position_controllers/JointPositionController
+  joint: right_ankle_roll_joint
+  pid: {p: 100.0, i: 0.01, d: 100.0}
+
+#left leg controller
+left_waist_yaw_controller:
+  type: position_controllers/JointPositionController
+  joint: left_waist_yaw_joint
+  pid: {p: 100.0, i: 0.01, d: 100.0}
+
+left_waist_roll_controller:
+  type: position_controllers/JointPositionController
+  joint: left_waist_roll_joint
+  pid: {p: 100.0, i: 0.01, d: 100.0}
+
+left_waist_pitch_controller:
+  type: position_controllers/JointPositionController
+  joint: left_waist_pitch_joint
+  pid: {p: 100.0, i: 0.01, d: 100.0}
+
+left_knee_pitch_controller:
+  type: position_controllers/JointPositionController
+  joint: left_knee_pitch_joint
+  pid: {p: 100.0, i: 0.01, d: 100.0}
+
+left_ankle_pitch_controller:
+  type: position_controllers/JointPositionController
+  joint: left_ankle_pitch_joint
+  pid: {p: 100.0, i: 0.01, d: 100.0}
+
+left_ankle_roll_controller:
+  type: position_controllers/JointPositionController
+  joint: left_ankle_roll_joint
+  pid: {p: 100.0, i: 0.01, d: 100.0}
+

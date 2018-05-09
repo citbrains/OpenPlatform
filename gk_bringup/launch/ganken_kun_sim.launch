@@ -10,15 +10,11 @@
         <arg name="gui" value="true"/>
     </include>
 
-    <!-- load controller -->
+    <!-- load controller (choose one and adjust transmission accordingly)-->
+    <include file="$(find gk_control)/launch/trajectory_control.launch" />
+    <!--
+    <include file="$(find gk_control)/launch/position_control.launch" />
     <include file="$(find gk_control)/launch/effort_control.launch" />
-
-<!--
-    <param name="use_gui" value="$(arg gui)" />
-    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
-        <rosparam param="source_list">["manipulator/joint_states"]</rosparam>
-    </node>
-    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher output="screen" />
--->
+    -->
 
 </launch>
