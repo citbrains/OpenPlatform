@@ -1,7 +1,7 @@
 # opr_description
 
 ## Overview
-GankenKun URDF model
+Open Platform Robot description package
 
 ## Available Model
-* version 1
+* GankenKun v1
