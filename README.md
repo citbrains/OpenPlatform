@@ -1,4 +1,4 @@
-# Ganken-Kun ROS
+# GankenKun ROS
 ROS package for CIT Open Platform Robot GankenKun
 
 # OpenPlatform

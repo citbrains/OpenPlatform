@@ -1,0 +1,74 @@
+head_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - head_yaw_joint
+    - head_pitch_joint
+  constraints:
+    goal_time: 0.6
+    stopped_velocity_tolerance: 0.05
+    gripper_finger_joint: {trajectory: 0.2, goal: 0.2}
+  stop_trajectory_duration: 0.5
+  state_publish_rate:  125
+  action_monitor_rate: 10
+
+left_arm_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - left_shoulder_pitch_joint
+    - left_shoulder_roll_joint
+    - left_arm_pitch_joint
+  constraints:
+    goal_time: 0.6
+    stopped_velocity_tolerance: 0.05
+    gripper_finger_joint: {trajectory: 0.2, goal: 0.2}
+  stop_trajectory_duration: 0.5
+  state_publish_rate:  125
+  action_monitor_rate: 10
+
+right_arm_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - right_shoulder_pitch_joint
+    - right_shoulder_roll_joint
+    - right_arm_pitch_joint
+  constraints:
+    goal_time: 0.6
+    stopped_velocity_tolerance: 0.05
+    gripper_finger_joint: {trajectory: 0.2, goal: 0.2}
+  stop_trajectory_duration: 0.5
+  state_publish_rate:  125
+  action_monitor_rate: 10
+
+left_leg_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - left_waist_yaw_joint
+    - left_waist_pitch_joint
+    - left_waist_roll_joint
+    - left_knee_pitch_joint
+    - left_ankle_pitch_joint
+    - left_ankle_roll_joint
+  constraints:
+    goal_time: 0.6
+    stopped_velocity_tolerance: 0.05
+    gripper_finger_joint: {trajectory: 0.2, goal: 0.2}
+  stop_trajectory_duration: 0.5
+  state_publish_rate:  125
+  action_monitor_rate: 10
+
+right_leg_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - right_waist_yaw_joint
+    - right_waist_pitch_joint
+    - right_waist_roll_joint
+    - right_knee_pitch_joint
+    - right_ankle_pitch_joint
+    - right_ankle_roll_joint
+  constraints:
+    goal_time: 0.6
+    stopped_velocity_tolerance: 0.05
+    gripper_finger_joint: {trajectory: 0.2, goal: 0.2}
+  stop_trajectory_duration: 0.5
+  state_publish_rate:  125
+  action_monitor_rate: 10

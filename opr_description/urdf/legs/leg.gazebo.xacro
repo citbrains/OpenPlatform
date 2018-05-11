@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    
+    <xacro:macro name="mimic_joint_plugin" params="name parent multiplier:=1.0 offset:=0 sensitiveness:=0.0 max_effort:=1.0">
+        <gazebo>
+            <plugin name="${name}_mimic_joint_plugin" filename="libroboticsgroup_gazebo_mimic_joint_plugin.so">
+                <joint>${parent}_joint</joint>
+                <mimicJoint>${name}_joint</mimicJoint>
+                <hasPID/>
+                <multiplier>${multiplier}</multiplier>
+                <offset>${offset}</offset>
+                <sensitiveness>${sensitiveness}</sensitiveness>
+                <maxEffort>${max_effort}</maxEffort>
+            </plugin>
+        </gazebo>
+    </xacro:macro>
+
+    <xacro:macro name="leg_reference" params="name color">
+        <gazebo reference="${name}_link">
+            <material>Gazebo/${color}</material>
+            <mu1>1.0</mu1>
+            <mu2>1.0</mu2>
+            <kp>1000000.0</kp>
+            <kd>100.0</kd>
+            <gravity>false</gravity>
+            <minDepth>0.001</minDepth>
+            <maxVel>1.0</maxVel>
+        </gazebo>
+    </xacro:macro>
+
+    <xacro:leg_reference name="left_waist_yaw" color="Grey"/>
+    <xacro:leg_reference name="left_waist_roll" color="White"/>
+    <xacro:leg_reference name="left_waist_front_pitch" color="Blue"/>
+    <xacro:leg_reference name="left_waist_back_pitch" color="Blue"/>
+    <xacro:leg_reference name="left_knee_pitch" color="White"/>
+    <xacro:leg_reference name="left_shin_front_pitch" color="Blue"/>
+    <xacro:leg_reference name="left_shin_back_pitch" color="Blue"/>
+    <xacro:leg_reference name="left_independent_pitch" color="Grey"/>
+    <xacro:leg_reference name="left_ankle_pitch" color="White"/>
+    <xacro:leg_reference name="left_foot" color="Black"/>
+
+    <xacro:mimic_joint_plugin name="left_waist_front_pitch" parent="left_waist_pitch" multiplier="-1" max_effort="10.0" />
+    <xacro:mimic_joint_plugin name="left_waist_back_pitch" parent="left_waist_pitch" multiplier="-1" max_effort="10.0" />
+    <xacro:mimic_joint_plugin name="left_knee_front_pitch" parent="left_knee_pitch" multiplier="1" max_effort="10.0" />
+    <xacro:mimic_joint_plugin name="left_ankle_independent_pitch" parent="left_knee_pitch" multiplier="-1" max_effort="10.0" />
+
+    <xacro:leg_reference name="right_waist_yaw" color="Grey"/>
+    <xacro:leg_reference name="right_waist_roll" color="White"/>
+    <xacro:leg_reference name="right_waist_front_pitch" color="Blue"/>
+    <xacro:leg_reference name="right_waist_back_pitch" color="Blue"/>
+    <xacro:leg_reference name="right_knee_pitch" color="White"/>
+    <xacro:leg_reference name="right_shin_front_pitch" color="Blue"/>
+    <xacro:leg_reference name="right_shin_back_pitch" color="Blue"/>
+    <xacro:leg_reference name="right_independent_pitch" color="Grey"/>
+    <xacro:leg_reference name="right_ankle_pitch" color="White"/>
+    <xacro:leg_reference name="right_foot" color="Black"/>
+
+    <xacro:mimic_joint_plugin name="right_waist_front_pitch" parent="right_waist_pitch" multiplier="-1" max_effort="10.0" />
+    <xacro:mimic_joint_plugin name="right_waist_back_pitch" parent="right_waist_pitch" multiplier="-1" max_effort="10.0" />
+    <xacro:mimic_joint_plugin name="right_knee_front_pitch" parent="right_knee_pitch" multiplier="1" max_effort="10.0" />
+    <xacro:mimic_joint_plugin name="right_ankle_independent_pitch" parent="right_knee_pitch" multiplier="-1" max_effort="10.0" />
+
+</robot>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:macro name="leg_transmission" params="name">
+        <transmission name="trans_${name}">
+        <type>transmission_interface/SimpleTransmission</type>
+            <joint name="${name}_joint">
+                <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            </joint>
+            <actuator name="motor_{name}">
+                <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+                <mechanicalReduction>1</mechanicalReduction>
+            </actuator>
+        </transmission>
+    </xacro:macro>
+
+    <xacro:leg_transmission name="left_waist_yaw"/>
+    <xacro:leg_transmission name="left_waist_roll"/>
+    <xacro:leg_transmission name="left_waist_pitch"/>
+    <xacro:leg_transmission name="left_knee_pitch"/>
+    <xacro:leg_transmission name="left_ankle_pitch"/>
+    <xacro:leg_transmission name="left_ankle_roll"/>
+
+    <xacro:leg_transmission name="right_waist_yaw"/>
+    <xacro:leg_transmission name="right_waist_roll"/>
+    <xacro:leg_transmission name="right_waist_pitch"/>
+    <xacro:leg_transmission name="right_knee_pitch"/>
+    <xacro:leg_transmission name="right_ankle_pitch"/>
+    <xacro:leg_transmission name="right_ankle_roll"/>
+
+</robot>
