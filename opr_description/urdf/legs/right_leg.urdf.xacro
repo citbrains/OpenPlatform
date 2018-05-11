@@ -1,0 +1,300 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <!-- leg joints -->
+    <joint name="right_waist_yaw_joint" type="revolute" >
+        <parent link="body_link" />
+        <child link="right_waist_yaw_link" />
+        <origin xyz="0.005 -0.044 -0.0575" rpy="0 0 0" />
+        <limit effort="1000" lower="${-3*PI/4}" upper="${3*PI/4}" velocity="1.0" />
+        <axis xyz="0 0 1" />
+    </joint>
+
+    <joint name="right_waist_roll_joint" type="revolute" >
+        <parent link="right_waist_yaw_link" />
+        <child link="right_waist_roll_link" />
+        <origin xyz="-0.0035 0 -0.0389" rpy="0 0 0" />
+        <limit effort="1000" lower="${-PI/2}" upper="${PI/2}" velocity="1.0" />
+        <axis xyz="1 0 0" />
+    </joint>
+
+    <joint name="right_waist_front_pitch_joint" type="revolute" >
+        <parent link="right_waist_roll_link" />
+        <child link="right_waist_front_pitch_link" />
+        <origin xyz="0.0121 0 0.00062" rpy="0 0 0" />
+        <mimic joint="right_waist_pitch_joint" multiplier="-1" offset="0" />
+        <limit effort="1000" lower="${-PI/2}" upper="${PI/6}" velocity="1.0" />
+        <axis xyz="0 1 0" />
+    </joint>
+
+    <joint name="right_waist_back_pitch_joint" type="revolute" >
+        <parent link="right_waist_roll_link" />
+        <child link="right_waist_back_pitch_link" />
+        <origin xyz="-0.0198 0 -0.0194" rpy="0 0 0" />
+        <mimic joint="right_waist_pitch_joint" multiplier="-1" offset="0" />
+        <limit effort="1000" lower="${-PI/2}" upper="${PI/6}" velocity="1.0" />
+        <axis xyz="0 1 0" />
+    </joint>
+
+    <joint name="right_waist_pitch_joint" type="revolute" >
+        <parent link="right_waist_back_pitch_link" />
+        <child link="right_knee_pitch_link" />
+        <origin xyz="0 0 -0.1" rpy="0 0 0" />
+        <limit effort="1000" lower="${-PI/6}" upper="${PI/2}" velocity="1.0" />
+        <axis xyz="0 1 0" />
+    </joint>
+
+    <joint name="right_knee_pitch_joint" type="revolute" >
+        <parent link="right_knee_pitch_link" />
+        <child link="right_shin_back_pitch_link" />
+        <origin xyz="0 0 -0.017" rpy="0 0 0" />
+        <limit effort="1000" lower="${-PI/6}" upper="${PI/2}" velocity="1.0" />
+        <axis xyz="0 1 0" />
+    </joint>
+
+    <joint name="right_knee_front_pitch_joint" type="revolute" >
+        <parent link="right_knee_pitch_link" />
+        <child link="right_shin_front_pitch_link" />
+        <origin xyz="0.0319 0 -0.037" rpy="0 0 0" />
+        <mimic joint="right_knee_pitch_joint" multiplier="1" offset="0" />
+        <limit effort="1000" lower="${-PI/6}" upper="${PI/2}" velocity="1.0" />
+        <axis xyz="0 1 0" />
+    </joint>
+
+    <joint name="right_ankle_independent_pitch_joint" type="revolute" >
+        <parent link="right_shin_front_pitch_link" />
+        <child link="right_independent_pitch_link" />
+        <origin xyz="0 0 -0.1" rpy="0 0 0" />
+        <mimic joint="right_knee_pitch_joint" multiplier="-1" offset="0" />
+        <limit effort="1000" lower="${-PI/6}" upper="${PI/2}" velocity="1.0" />
+        <axis xyz="0 1 0" />
+    </joint>
+
+    <joint name="right_ankle_pitch_joint" type="revolute" >
+        <parent link="right_independent_pitch_link" />
+        <child link="right_ankle_pitch_link" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <limit effort="1000" lower="${-3*PI/4}" upper="${3*PI/4}" velocity="1.0" />
+        <axis xyz="0 1 0" />
+    </joint>
+
+    <joint name="right_ankle_roll_joint" type="revolute" >
+        <parent link="right_ankle_pitch_link" />
+        <child link="right_foot_link" />
+        <origin xyz="-0.0325 0 0" rpy="0 0 0"/>
+        <limit effort="1000" lower="${-PI/2}" upper="${PI/2}" velocity="1.0" />
+        <axis xyz="1 0 0" />
+    </joint>
+
+    <!-- leg links -->
+    <link name="right_waist_yaw_link">
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+            </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 ${PI/2}"/>
+            <geometry>
+                <mesh filename="package://opr_description/meshes/STL/LEGS/body_to_waist.stl" />
+            </geometry>
+            <material name="grey" />
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 ${PI/2}"/>
+            <geometry>
+                <mesh filename="package://opr_description/meshes/STL/LEGS/body_to_waist.stl" />
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="right_waist_roll_link">
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+            </inertial>
+        <visual>
+            <origin xyz="0 0 0.003" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://opr_description/meshes/STL/LEGS/waist.stl" />
+            </geometry>
+            <material name="white" />
+        </visual>
+        <collision>
+            <origin xyz="0 0 0.003" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://opr_description/meshes/STL/LEGS/waist.stl" />
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="right_waist_front_pitch_link">
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+            </inertial>
+        <visual>
+            <origin xyz="-0.001 0 -0.05" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://opr_description/meshes/STL/LEGS/front_link.stl" />
+            </geometry>
+            <material name="blue" />
+        </visual>
+        <collision>
+            <origin xyz="-0.001 0 -0.05" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://opr_description/meshes/STL/LEGS/front_link.stl" />
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="right_waist_back_pitch_link">
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+            </inertial>
+        <visual>
+            <origin xyz="0.001 0 -0.05" rpy="${PI} 0 ${PI}"/>
+            <geometry>
+                <mesh filename="package://opr_description/meshes/STL/LEGS/back_link.stl" />
+            </geometry>
+            <material name="blue" />
+        </visual>
+        <collision>
+            <origin xyz="0.001 0 -0.05" rpy="${PI} 0 ${PI}"/>
+            <geometry>
+                <mesh filename="package://opr_description/meshes/STL/LEGS/back_link.stl" />
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="right_knee_pitch_link">
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+            </inertial>
+        <visual>
+            <origin xyz="0.0002 0 0.0002" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://opr_description/meshes/STL/LEGS/right_knee.stl" />
+            </geometry>
+            <material name="white" />
+        </visual>
+        <collision>
+            <origin xyz="0.0002 0 0.0002" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://opr_description/meshes/STL/LEGS/right_knee.stl" />
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="right_shin_front_pitch_link">
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+            </inertial>
+        <visual>
+            <origin xyz="-0.001 0 -0.05" rpy="${PI} 0 0"/>
+            <geometry>
+                <mesh filename="package://opr_description/meshes/STL/LEGS/front_link.stl" />
+            </geometry>
+            <material name="blue" />
+        </visual>
+        <collision>
+            <origin xyz="-0.001 0 -0.05" rpy="${PI} 0 0"/>
+            <geometry>
+                <mesh filename="package://opr_description/meshes/STL/LEGS/front_link.stl" />
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="right_shin_back_pitch_link">
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+            </inertial>
+        <visual>
+            <origin xyz="0.001 0 -0.05" rpy="0 0 ${PI}"/>
+            <geometry>
+                <mesh filename="package://opr_description/meshes/STL/LEGS/back_link.stl" />
+            </geometry>
+            <material name="blue" />
+        </visual>
+        <collision>
+            <origin xyz="0.001 0 -0.05" rpy="0 0 ${PI}"/>
+            <geometry>
+                <mesh filename="package://opr_description/meshes/STL/LEGS/back_link.stl" />
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="right_independent_pitch_link">
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+            </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="${PI/2} ${PI/7} ${PI}"/>
+            <geometry>
+                <mesh filename="package://opr_description/meshes/STL/LEGS/ankle_pitch.stl" />
+            </geometry>
+            <material name="grey" />
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="${PI/2} ${PI/7} ${PI}"/>
+            <geometry>
+                <mesh filename="package://opr_description/meshes/STL/LEGS/ankle_pitch.stl" />
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="right_ankle_pitch_link">
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+            </inertial>
+        <visual>
+            <origin xyz="-0.0137 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://opr_description/meshes/STL/LEGS/right_ankle.stl" />
+            </geometry>
+            <material name="white" />
+        </visual>
+        <collision>
+            <origin xyz="-0.0137 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://opr_description/meshes/STL/LEGS/right_ankle.stl" />
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="right_foot_link">
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+            </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://opr_description/meshes/STL/LEGS/right_foot.stl" />
+            </geometry>
+            <material name="black" />
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://opr_description/meshes/STL/LEGS/right_foot.stl" />
+            </geometry>
+        </collision>
+    </link>
+
+</robot>

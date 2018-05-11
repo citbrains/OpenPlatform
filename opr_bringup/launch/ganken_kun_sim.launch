@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<launch>
+    
+    <!-- load gazebo-->
+    <arg name="model" default="$(find opr_description)/robots/ganken_kun_v1.xacro"  />
+    <arg name="paused" default="false"/>
+    <include file="$(find opr_gazebo)/launch/gazebo.launch">
+        <arg name="model" value="$(arg model)"/>
+        <arg name="paused" value="$(arg paused)"/>
+        <arg name="gui" value="true"/>
+    </include>
+
+    <!-- load controller (choose one and adjust transmission accordingly)-->
+    <include file="$(find opr_control)/launch/trajectory_control.launch" />
+    <!--
+    <include file="$(find opr_control)/launch/position_control.launch" />
+    <include file="$(find opr_control)/launch/effort_control.launch" />
+    -->
+
+</launch>
