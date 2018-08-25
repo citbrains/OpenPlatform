@@ -6,8 +6,6 @@ We are now developping a open platform humanoid robot for the RoboCup Humanoid L
 
 We aim to build a robust robot system that is easy to trial and error.
 
-[Mechanism](https://github.com/citbrains/OpenPlatform/tree/mechanism)
-
 [VIDEO](https://www.youtube.com/watch?v=7Jgm58YSsWw)
 
 [Raspberry PI 3 の設定](https://github.com/citbrains/OpenPlatform/wiki/Raspberry-PI-3-%E3%81%AE%E8%A8%AD%E5%AE%9A)
