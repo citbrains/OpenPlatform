@@ -1,0 +1,19 @@
+送付ファイルリスト
+
+OPR_Main_v2.cmp(部品面パターン)
+
+OPR_Main_v2.plc(部品面シルクデータ)
+
+OPR_Main_v2.pls(ハンダ面シルクデータ)
+
+OPR_Main_v2.sol(ハンダ面パターン)
+
+OPR_Main_v2.stc(部品面レジストデータ)
+
+OPR_Main_v2.sts(ハンダ面レジストデータ)
+
+OPR_Main_v2.out(外形データ)
+
+
+OPR_Main_v2.drd ドリルデータ
+OPR_Main_v2.dri ドリルリスト
