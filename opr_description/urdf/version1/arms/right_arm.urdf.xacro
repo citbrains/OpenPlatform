@@ -36,14 +36,14 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 ${PI}"/>
             <geometry>
-                <mesh filename="package://opr_description/meshes/STL/ARMS/body_to_arm.stl" />
+                <mesh filename="package://opr_description/meshes/version1/STL/ARMS/body_to_arm.stl" />
             </geometry>
             <material name="grey" />
         </visual>
         <collision>
             <origin xyz="0 0 0" rpy="0 0 ${PI}"/>
             <geometry>
-                <mesh filename="package://opr_description/meshes/STL/ARMS/body_to_arm.stl" />
+                <mesh filename="package://opr_description/meshes/version1/STL/ARMS/body_to_arm.stl" />
             </geometry>
         </collision>
     </link>
@@ -57,14 +57,14 @@
         <visual>
             <origin xyz="0 0 -0.042" rpy="0 0 ${PI}"/>
             <geometry>
-                <mesh filename="package://opr_description/meshes/STL/ARMS/right_arm.stl" />
+                <mesh filename="package://opr_description/meshes/version1/STL/ARMS/right_arm.stl" />
             </geometry>
             <material name="blue" />
         </visual>
         <collision>
             <origin xyz="0 0 -0.042" rpy="0 0 ${PI}"/>
             <geometry>
-                <mesh filename="package://opr_description/meshes/STL/ARMS/right_arm.stl" />
+                <mesh filename="package://opr_description/meshes/version1/STL/ARMS/right_arm.stl" />
             </geometry>
         </collision>
     </link>
@@ -78,14 +78,14 @@
         <visual>
             <origin xyz="0.09 0 0" rpy="${PI} 0 0"/>
             <geometry>
-                <mesh filename="package://opr_description/meshes/STL/ARMS/hand.stl" />
+                <mesh filename="package://opr_description/meshes/version1/STL/ARMS/hand.stl" />
             </geometry>
             <material name="black" />
         </visual>
         <collision>
             <origin xyz="0.09 0 0" rpy="${PI} 0 0"/>
             <geometry>
-                <mesh filename="package://opr_description/meshes/STL/ARMS/hand.stl" />
+                <mesh filename="package://opr_description/meshes/version1/STL/ARMS/hand.stl" />
             </geometry>
         </collision>
     </link>

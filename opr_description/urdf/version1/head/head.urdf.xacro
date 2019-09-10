@@ -28,14 +28,14 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
-                <mesh filename="package://opr_description/meshes/STL/HEAD/head_yaw.stl" />
+                <mesh filename="package://opr_description/meshes/version1/STL/HEAD/head_yaw.stl" />
             </geometry>
             <material name="grey" />
         </visual>
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
-                <mesh filename="package://opr_description/meshes/STL/HEAD/head_yaw.stl" />
+                <mesh filename="package://opr_description/meshes/version1/STL/HEAD/head_yaw.stl" />
             </geometry>
         </collision>
     </link>
@@ -49,14 +49,14 @@
         <visual>
             <origin xyz="0.0235 0 0.006" rpy="0 0 0"/>
             <geometry>
-                <mesh filename="package://opr_description/meshes/STL/HEAD/head_pitch.stl" />
+                <mesh filename="package://opr_description/meshes/version1/STL/HEAD/head_pitch.stl" />
             </geometry>
             <material name="white" />
         </visual>
         <collision>
             <origin xyz="0.0235 0 0.006" rpy="0 0 0"/>
             <geometry>
-                <mesh filename="package://opr_description/meshes/STL/HEAD/head_pitch.stl" />
+                <mesh filename="package://opr_description/meshes/version1/STL/HEAD/head_pitch.stl" />
             </geometry>
         </collision>
     </link>
