@@ -32,7 +32,7 @@
             <mass value="0.5"/>
             <origin xyz="0 0 0"/>
             <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
-            </inertial>
+        </inertial>
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
@@ -53,7 +53,7 @@
             <mass value="0.5"/>
             <origin xyz="0 0 0"/>
             <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
-            </inertial>
+        </inertial>
         <visual>
             <origin xyz="0 0 -0.042" rpy="0 0 ${PI}"/>
             <geometry>
@@ -74,7 +74,7 @@
             <mass value="0.5"/>
             <origin xyz="0 0 0"/>
             <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
-            </inertial>
+        </inertial>
         <visual>
             <origin xyz="0.09 0 0" rpy="0 0 0"/>
             <geometry>
