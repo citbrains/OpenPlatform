@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <!-- camera joints -->
+    <joint name="camera_joint" type="fixed" >
+        <parent link="head_yaw_link" />
+        <child link="camera_link" />
+        <origin xyz="0.036495 0 0.063504" rpy="0 ${PI/4} 0" />
+    </joint>
+
+    <!-- camera link -->
+    <link name="camera_link"/>
+
+</robot>

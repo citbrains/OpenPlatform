@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <!-- imu joint -->
+    <joint name="imu_joint" type="fixed" >
+        <parent link="body_link" />
+        <child link="imu_link" />
+        <origin xyz="-0.005 0.01682 0.003" rpy="0 0 0" />
+    </joint>
+
+    <!-- imu link -->
+    <link name="imu_link"/>
+
+</robot>
