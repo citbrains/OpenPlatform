@@ -25,8 +25,8 @@
     <xacro:include filename="$(find opr_description)/urdf/version3/arms/right_arm.urdf.xacro"/>
     <xacro:include filename="$(find opr_description)/urdf/version3/legs/left_leg.urdf.xacro"/>
     <xacro:include filename="$(find opr_description)/urdf/version3/legs/right_leg.urdf.xacro"/>
-    <xacro:include filename="$(find opr_description)/urdf/version3/sensors/camera.urdf.xacro"/>
-    <xacro:include filename="$(find opr_description)/urdf/version3/sensors/imu.urdf.xacro"/>
+    <xacro:include filename="$(find opr_description)/urdf/version3/sensors/camera/camera.urdf.xacro"/>
+    <xacro:include filename="$(find opr_description)/urdf/version3/sensors/imu/imu.urdf.xacro"/>
 
     <!-- Import transmission -->
 
