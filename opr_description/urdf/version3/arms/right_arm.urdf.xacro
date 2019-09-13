@@ -2,7 +2,7 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
     <!-- arm joints -->
-    <joint name="right_shoulder_joint" type="revolute" >
+    <joint name="right_shoulder_pitch_joint" type="revolute" >
         <parent link="body_link" />
         <child link="right_shoulder_link" />
         <origin xyz="0.0 -0.06 0.072" rpy="${-PI/2} 0 0" />
@@ -10,17 +10,17 @@
         <axis xyz="0 0 1" />
     </joint>
 
-    <joint name="right_arm_joint" type="revolute" >
+    <joint name="right_shoulder_roll_joint" type="revolute" >
         <parent link="right_shoulder_link" />
-        <child link="right_arm_link" />
+        <child link="right_upper_arm_link" />
         <origin xyz="0 0 -0.0315" rpy="0 ${PI/2} 0" />
         <limit effort="1000" lower="${-PI}" upper="${PI}" velocity="1.0" />
         <axis xyz="0 0 1" />
     </joint>
 
-    <joint name="right_hand_joint" type="revolute" >
-        <parent link="right_arm_link" />
-        <child link="right_hand_link" />
+    <joint name="right_elbow_pitch_joint" type="revolute" >
+        <parent link="right_upper_arm_link" />
+        <child link="right_lower_arm_link" />
         <origin xyz="0 0.109 0" rpy="0 ${-PI/2} 0" />
         <limit effort="1000" lower="${-3*PI/4}" upper="${3*PI/4}" velocity="1.0" />
         <axis xyz="0 0 1" />
@@ -48,7 +48,7 @@
         </collision>
     </link>
 
-    <link name="right_arm_link">
+    <link name="right_upper_arm_link">
         <inertial>
             <mass value="0.185658"/>
             <origin xyz="0 0.0545 0"/>
@@ -68,7 +68,7 @@
         </collision>
     </link>
 
-    <link name="right_hand_link">
+    <link name="right_lower_arm_link">
         <inertial>
             <mass value="0.059757"/>
             <origin xyz="0 0.132001 0"/>
