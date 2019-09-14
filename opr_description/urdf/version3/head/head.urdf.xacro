@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <!-- head joints -->
+    <joint name="head_yaw_joint" type="revolute" >
+        <parent link="body_link" />
+        <child link="head_yaw_link" />
+        <origin xyz="0 0 0.09475" rpy="0 0 0" />
+        <limit effort="1000" lower="${-3*PI/4}" upper="${3*PI/4}" velocity="1.0" />
+        <axis xyz="0 0 1" />
+    </joint>
+
+    <!-- head link -->
+    <link name="head_yaw_link">
+        <inertial>
+            <mass value="0.10351"/>
+            <origin xyz="0.017325 0 0.065059"/>
+            <inertia ixx="0.0647399" ixy="0.0" ixz="0.0" iyy="0.098874" iyz="0.0" izz="0.088696"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="${-PI/2} ${PI/2} 0"/>
+            <geometry>
+                <mesh filename="package://opr_description/meshes/version3/DAE/head.dae" />
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="${-PI/2} ${PI/2} 0"/>
+            <geometry>
+                <mesh filename="package://opr_description/meshes/version3/STL/head.stl" />
+            </geometry>
+        </collision>
+    </link>
+
+</robot>
