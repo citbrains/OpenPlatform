@@ -1,11 +1,15 @@
 # OpenPlatform
-Open Platform Robot
+Open Platform Humanoid Robot  
 
-We are now developping a open platform humanoid robot for the RoboCup Humanoid League.
-![160719humanoid](https://cloud.githubusercontent.com/assets/5755200/21309465/d8eb3914-c621-11e6-90f8-3ce555e189f6.jpg)
+We are developing an open platform humanoid robot for the RoboCup Humanoid League.  
+We aim to develop a robust robot system that helps the experiment on the real robot.  
 
-We aim to build a robust robot system that is easy to trial and error.
+![image](https://user-images.githubusercontent.com/5755200/81126841-87c5f880-8f77-11ea-934b-ef93d6afc94d.png)
 
-[VIDEO](https://www.youtube.com/watch?v=7Jgm58YSsWw)
+### Prizes
+2019 RoboCup 4on4 3rd, Technical Challenge 2nd, Drop In Challenge 2nd  
+2018 RoboCup 4on4 3rd, Technical Challenge 1st  
+2017 RoboCup 4on4 3rd, Technical Challenge 1st  
 
-[Raspberry PI 3 の設定](https://github.com/citbrains/OpenPlatform/wiki/Raspberry-PI-3-%E3%81%AE%E8%A8%AD%E5%AE%9A)
+[VIDEO]  
+https://www.youtube.com/playlist?list=PLB7_jZwkBJdQZTIP_5HFZ_qUzT54mZ3Gq
