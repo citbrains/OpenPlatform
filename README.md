@@ -3,6 +3,7 @@ Open Platform Humanoid Robot
 
 We are developing an open platform humanoid robot for the RoboCup Humanoid League.  
 We aim to develop a robust robot system that helps the experiment on the real robot.  
+The original robot was designed by Shimoyoshi.
 
 ![image](https://user-images.githubusercontent.com/5755200/81126841-87c5f880-8f77-11ea-934b-ef93d6afc94d.png)
 
